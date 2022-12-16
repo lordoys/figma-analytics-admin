@@ -1,9 +1,24 @@
 <script setup>
 import axios from "axios";
 import uniqby from "lodash.uniqby";
-import groupBy from "lodash.groupBy";
 import { ref } from "vue";
 import { expandDate, getYearData } from "./utils";
+
+const groupBy = (list, string) => {
+  const groups = {};
+
+  list.forEach((item) => {
+    const key = item[string];
+
+    if (!groups[key]) {
+      groups[key] = [];
+    }
+
+    groups[key].push({ ...item });
+  });
+
+  return groups;
+};
 
 const openingsAll = ref([]);
 const uniqAll = ref([]);
