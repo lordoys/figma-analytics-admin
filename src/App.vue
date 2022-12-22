@@ -30,7 +30,7 @@ axios
 </script>
 
 <template>
-  <h1>Аналитика</h1>
+  <h1>Аналитика new</h1>
 
   <hr />
   <br />
