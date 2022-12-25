@@ -172,8 +172,14 @@ axios
   display: flex;
   align-items: flex-end;
   gap: 5px;
-  height: 30vw;
+  height: 300px;
   padding-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .table {
+    height: 100px;
+  }
 }
 
 .table__item {
