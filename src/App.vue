@@ -64,38 +64,38 @@ axios
   <p>Открытий плагина за все время: {{ openingsAll.length }}</p>
   <p>Уникальных пользователей за все время: {{ uniqAll.length }}</p>
 
-  <br />
-  <hr />
-  <br />
+  <!--  <br />-->
+  <!--  <hr />-->
+  <!--  <br />-->
 
-  <h2>По годам</h2>
-  <h3>Открытий</h3>
+  <!--  <h2>По годам</h2>-->
+  <!--  <h3>Открытий</h3>-->
 
-  <div class="table">
-    <p
-      v-for="value in dataByYear"
-      :key="value.name"
-      class="table__item"
-      :style="{ height: `${value.openingsHeight}%` }"
-    >
-      <span class="table__value">{{ value.openings }}</span>
-      <span class="table__name">{{ value.name }}</span>
-    </p>
-  </div>
+  <!--  <div class="table">-->
+  <!--    <p-->
+  <!--      v-for="value in dataByYear"-->
+  <!--      :key="value.name"-->
+  <!--      class="table__item"-->
+  <!--      :style="{ height: `${value.openingsHeight}%` }"-->
+  <!--    >-->
+  <!--      <span class="table__value">{{ value.openings }}</span>-->
+  <!--      <span class="table__name">{{ value.name }}</span>-->
+  <!--    </p>-->
+  <!--  </div>-->
 
-  <h3>Уникальных пользователей</h3>
+  <!--  <h3>Уникальных пользователей</h3>-->
 
-  <div class="table">
-    <p
-      v-for="value in dataByYear"
-      :key="value.name"
-      class="table__item"
-      :style="{ height: `${value.uniqHeight}%` }"
-    >
-      <span class="table__value">{{ value.uniq }}</span>
-      <span class="table__name">{{ value.name }}</span>
-    </p>
-  </div>
+  <!--  <div class="table">-->
+  <!--    <p-->
+  <!--      v-for="value in dataByYear"-->
+  <!--      :key="value.name"-->
+  <!--      class="table__item"-->
+  <!--      :style="{ height: `${value.uniqHeight}%` }"-->
+  <!--    >-->
+  <!--      <span class="table__value">{{ value.uniq }}</span>-->
+  <!--      <span class="table__name">{{ value.name }}</span>-->
+  <!--    </p>-->
+  <!--  </div>-->
 
   <br />
   <hr />
