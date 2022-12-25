@@ -197,7 +197,7 @@ axios
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: bold;
 }
 </style>
