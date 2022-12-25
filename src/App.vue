@@ -178,7 +178,7 @@ axios
 
 @media (max-width: 1024px) {
   .table {
-    height: 100px;
+    height: 150px;
   }
 }
 
