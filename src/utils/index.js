@@ -1,17 +1,18 @@
 import uniqby from "lodash.uniqby";
+import { months } from "../constants";
 
 export const expandDate = (list) => {
   return list.map((item) => {
     const date = new Date(item.createdAt);
     const year = date.getFullYear();
-    const month = date.getMonth();
+    const month = months[date.getMonth()];
     const day = date.getDate();
 
     return { ...item, year, month, day };
   });
 };
 
-export const getYearData = (group) => {
+export const getData = (group) => {
   let maxOpenings = 0;
   let maxUniq = 0;
   const result = [];
@@ -24,16 +25,16 @@ export const getYearData = (group) => {
   }
 
   for (const [key, value] of Object.entries(group)) {
-    const year = {};
+    const bar = {};
     const uniq = uniqby(value, "id").length;
 
-    year.name = key;
-    year.openings = value.length;
-    year.uniq = uniq;
-    year.openingsHeight = (value.length * 100) / maxOpenings;
-    year.uniqHeight = (uniq * 100) / maxUniq;
+    bar.name = key;
+    bar.openings = value.length;
+    bar.uniq = uniq;
+    bar.openingsHeight = (value.length * 100) / maxOpenings;
+    bar.uniqHeight = (uniq * 100) / maxUniq;
 
-    result.push(year);
+    result.push(bar);
   }
 
   return result;
